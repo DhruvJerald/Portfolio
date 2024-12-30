@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    background-color: #2b0063;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo span {
+    color: #740491;
+    text-shadow: 0 0 10px #0f077b;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.links a:hover {
+    color: #47077b;
+}
+
+section {
+    width: 100%;
+    height: 90vh;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.content {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+    color: #47077b;
+    text-shadow: 0 0 10px #50077b;
+}
+
+p {
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.bento-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.bento-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #44077b;
+    transition: 0.3s linear;
+}
+
+.bento-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #6d077b;
+}
+
+
+/* snow stuff*/
+.snowflake {
+    position: fixed;
+    top: 0;
+    color: white;
+    z-index: 1000;
+    animation: fall linear;
+    pointer-events: none;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  .music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  #toggle-music {
+    background-color: #ff4444; /* Festive red */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  #toggle-music:hover {
+    background-color: #ff9999;
+    transform: scale(1.1);
+  }
+  
